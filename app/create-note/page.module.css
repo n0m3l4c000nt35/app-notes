@@ -1,0 +1,103 @@
+.createNote {
+  margin-bottom: 1rem;
+  padding-inline: 0.5rem;
+}
+
+@media screen and (min-width: 480px) {
+  .createNote {
+    width: 100%;
+    max-width: 480px;
+    margin-inline: auto;
+  }
+}
+
+.titlePage {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.createNoteIcon {
+  display: block;
+  margin-inline: auto;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.labelForm {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.inputForm {
+  display: block;
+  width: 100%;
+  height: 2rem;
+  margin-top: 0.2rem;
+  border: 1px dotted var(--darkColor);
+  padding: 0.5rem;
+  font-family: Neucha;
+  font-size: 1rem;
+}
+
+.inputForm::placeholder {
+  font-family: Neucha;
+  font-size: 1rem;
+}
+
+.inputForm:focus {
+  outline: none;
+  border: 1px solid var(--darkColor);
+}
+
+.textareaForm {
+  display: block;
+  width: 100%;
+  margin-top: 0.3rem;
+  border: 1px dotted var(--darkColor);
+  padding: 0.5rem;
+  font-family: Neucha;
+  font-size: 1rem;
+  resize: none;
+}
+
+.textareaForm:focus {
+  outline: none;
+  border: 1px solid var(--darkColor);
+}
+
+.submitForm {
+  display: inline-block;
+  border: 1px solid var(--darkColor);
+  border-radius: 8px;
+  padding: 0.5rem 0.8rem;
+  background-color: var(--darkColor);
+  color: var(--lightColor);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.submitForm:hover {
+  background-color: var(--lightColor);
+  color: var(--darkColor);
+}
+
+.submitForm:focus {
+  outline: none;
+  color: var(--accentColor);
+}
+
+.error {
+  color: var(--accentColor);
+}
+
+.inputError {
+  padding-bottom: 0.5rem;
+}
+
+.stateError {
+  padding-top: 0.5rem;
+}

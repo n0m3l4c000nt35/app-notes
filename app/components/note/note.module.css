@@ -1,0 +1,34 @@
+.note {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--midColor);
+  padding-inline: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.note:not(:last-of-type) {
+  margin-bottom: 1rem;
+}
+
+.buttonSubmit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: unset;
+  background-color: unset;
+}
+
+.buttonSubmit:focus {
+  outline: none;
+  color: var(--accentColor);
+}
+
+.trashIcon {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.trashIcon:hover {
+  color: var(--accentColor);
+}

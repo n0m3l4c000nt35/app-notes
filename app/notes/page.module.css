@@ -1,0 +1,53 @@
+.notesPage {
+  padding-inline: 0.5rem;
+}
+
+@media screen and (min-width: 480px) {
+  .notesPage {
+    width: 100%;
+    max-width: 480px;
+    margin-inline: auto;
+  }
+}
+
+.titlePage {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.notePageIcon {
+  display: block;
+  margin-inline: auto;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.navLink {
+  display: flex;
+  column-gap: 0.5rem;
+  width: fit-content;
+  border: 1px solid var(--darkColor);
+  border-radius: 8px;
+  padding: 0.5rem 0.8rem;
+  background-color: var(--darkColor);
+  color: var(--lightColor);
+  text-decoration: none;
+}
+
+.navLink:hover {
+  border: 1px solid var(--darkColor);
+  background-color: var(--lightColor);
+  color: var(--darkColor);
+}
+
+.navLink:focus {
+  outline: none;
+  border: 1px solid var(--darkColor);
+  color: var(--accentColor);
+}
+
+.navLinkIcon {
+  font-size: 1.2rem;
+}

@@ -1,0 +1,11 @@
+.loadingContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.loadingTitle {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  font-size: 2rem;
+  color: var(--accentColor);
+}

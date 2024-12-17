@@ -1,0 +1,79 @@
+.loginPage {
+  width: 100%;
+  max-width: 300px;
+  margin-inline: auto;
+  padding-inline: 0.5rem;
+}
+
+.titlePage {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.userIcon {
+  display: block;
+  margin-bottom: 2rem;
+  margin-inline: auto;
+  font-size: 3rem;
+}
+
+.labelForm {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.labelForm:last-of-type {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.inputForm {
+  display: block;
+  width: 100%;
+  height: 2rem;
+  border: 1px dashed var(--darkColor);
+  padding: 0.5rem;
+  font-family: Neucha;
+  font-size: 1rem;
+}
+
+.inputForm::placeholder {
+  font-family: Neucha;
+  font-size: 1rem;
+}
+
+.inputForm:focus {
+  outline: none;
+  border: 1px solid var(--darkColor);
+}
+
+.inputForm:valid {
+  color: green;
+}
+
+.inputForm:invalid {
+  color: var(--accentColor);
+}
+
+.submitForm {
+  display: inline-block;
+  margin-top: 0.5rem;
+  border: 1px solid var(--darkColor);
+  border-radius: 8px;
+  padding: 0.5rem 0.8rem;
+  background-color: var(--darkColor);
+  color: var(--lightColor);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.submitForm:hover {
+  background-color: var(--lightColor);
+  color: var(--darkColor);
+}
+
+.submitForm:focus {
+  outline: none;
+  color: var(--accentColor);
+}

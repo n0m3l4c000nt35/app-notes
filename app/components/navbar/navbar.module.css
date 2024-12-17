@@ -1,0 +1,46 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  color: var(--lightColor);
+}
+
+.nav>div {
+  display: flex;
+}
+
+.navLink {
+  color: var(--lightColor);
+  text-decoration: none;
+}
+
+.navLink:first-child {
+  margin-right: 1rem;
+}
+
+.navLinkForm {
+  margin-left: auto;
+}
+
+.btnLogout {
+  border: unset;
+  background-color: unset;
+  color: var(--lightColor);
+  cursor: pointer;
+}
+
+.navLink,
+.btnLogout {
+  font-size: 1.2rem;
+}
+
+.navLink:hover,
+.btnLogout:hover {
+  color: var(--accentColor);
+}
+
+.navLink:focus,
+.btnLogout:focus {
+  outline: none;
+  color: var(--accentColor);
+}
