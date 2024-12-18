@@ -1,28 +1,22 @@
 import { z } from "zod";
 
 export const LoginFormSchema = z.object({
-  email: z.string().email({ message: "Please enter a valid email." }).trim(),
-  password: z
+  email: z
     .string()
-    .min(4, { message: "Invalid credentials" })
-    .regex(/[a-zA-Z]/, { message: "Invalid credentials" })
-    .regex(/[0-9]/, { message: "Contain at least one number" })
-    .regex(/[^a-zA-Z0-9]/, {
-      message: "Contain at least one special character",
-    })
+    .email()
+    .regex(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/)
     .trim(),
+  password: z.string().min(4).trim(),
 });
 
 export const SignupFormSchema = z.object({
-  email: z.string().email({ message: "Please enter a valid email." }).trim(),
+  email: z.string().email().trim(),
   password: z
     .string()
     .min(4, { message: "Be at least 4 character long" })
-    .regex(/[a-zA-Z]/, { message: "Contain at least one letter." })
-    .regex(/[0-9]/, { message: "Contain at least one number" })
-    .regex(/[^a-zA-Z0-9]/, {
-      message: "Contain at least one special character",
-    })
+    .regex(/[a-zA-Z]+/, { message: "Must include at least one character from a to z" })
+    .regex(/[0-9]+/, { message: "Must include at least one number" })
+    .regex(/[^a-zA-Z0-9]/, { message: "Must include at least one special character" })
     .trim(),
 });
 
