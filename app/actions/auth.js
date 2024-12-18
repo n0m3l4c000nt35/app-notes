@@ -22,18 +22,14 @@ export async function signupUser(prevState, formData) {
 
   try {
     const user = await User.findOne({ email });
-
     if (user) return { message: "User already registered" };
-
     const saltRounds = await bcrypt.genSalt(10);
-
     const hashedPassword = await bcrypt.hash(password, saltRounds);
-
     const userCreated = await User.create({ email, password: hashedPassword });
+    if (!userCreated) throw new Error("Error trying register user");
   } catch (error) {
-    return { message: "AUTH SIGNUPUSER ERROR" };
+    return { message: error.message };
   }
-
   redirect("/login");
 }
 
@@ -46,22 +42,15 @@ export const loginUser = async (prevState, formData) => {
     password,
   });
 
-  if (!validatedFields.success) {
-    return { errors: validatedFields.error.flatten().fieldErrors };
-  }
+  if (!validatedFields.success) return { message: "Invalid credentials" };
 
   connectDB();
 
   const user = await User.findOne({ email });
-
   if (!user) return { message: "Invalid credentials" };
-
   const hashCompared = await bcrypt.compare(password, user.password);
-
   if (!hashCompared) return { message: "Invalid credentials" };
-
   await createSession(user._id);
-
   redirect("/notes");
 };
 
