@@ -22,31 +22,29 @@ export default function Page() {
             type="email"
             id="email"
             name="email"
-            placeholder="user@domain.tld"
+            placeholder="email@domain.tld"
             required
             autoFocus
           />
         </label>
-        {state?.errors?.email && (
-          <p style={{ paddingLeft: "0.5rem", paddingBottom: "0.5rem", color: "red" }}>{state.errors.email}</p>
-        )}
         <label className={styles.labelForm} htmlFor="password">
           <input
             className={styles.inputForm}
             type="password"
             id="password"
             name="password"
-            placeholder="Enter your password.."
+            placeholder="Enter your password"
             required
           />
         </label>
-        {state?.errors?.password && <p style={{ color: "red" }}>{state.errors.password}</p>}
         <button className={styles.submitForm} type="submit" aria-disabled={pending}>
           Login User
         </button>
-        <p style={{ paddingTop: "0.5rem", color: "red" }} aria-live="polite" role="status">
-          {state?.message}
-        </p>
+        {state?.message && (
+          <p className={styles.errorState} aria-live="polite" role="status">
+            {state?.message}
+          </p>
+        )}
       </form>
     </div>
   );
