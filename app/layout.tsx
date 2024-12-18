@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { AuthProvider } from "../context/auth-context";
+import Footer from "@/app/components/footer/footer";
 import "./globals.css";
 import Header from "@/app/components/header/header";
 import { neucha } from "@/fonts";
@@ -20,11 +21,7 @@ export default function RootLayout({
         <AuthProvider>
           <Header />
           {children}
-          <footer style={{ gridArea: "footer", padding: "1rem" }}>
-            <p style={{ fontSize: "1.2rem", textAlign: "center" }}>
-              <b style={{ color: "crimson" }}>&copy;</b> 2024 <b style={{ color: "orange" }}>n0m3l4c000nt35</b>
-            </p>
-          </footer>
+          <Footer />
         </AuthProvider>
       </body>
     </html>
