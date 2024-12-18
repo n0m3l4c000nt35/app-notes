@@ -18,6 +18,10 @@
   font-size: 3rem;
 }
 
+.labelPasswordContainer {
+  position: relative;
+}
+
 .labelForm {
   display: block;
   margin-bottom: 1rem;
@@ -48,6 +52,22 @@
 }
 
 .inputForm:invalid {
+  color: var(--accentColor);
+}
+
+.buttonToggleEyeIcon {
+  display: flex;
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  border: none;
+  background-color: unset;
+  font-size: 1.1rem;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.buttonToggleEyeIcon:hover {
   color: var(--accentColor);
 }
 
