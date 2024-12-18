@@ -25,12 +25,19 @@ export default function Page() {
             placeholder="user@domain.tld"
             minLength={5}
             maxLength={50}
+            // pattern="/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/"
             autoFocus
-            required
+            // required
           />
         </label>
         {state?.errors?.email && (
-          <p style={{ paddingLeft: "0.5rem", paddingBottom: "0.5rem", color: "red" }}>{state.errors.email}</p>
+          <div className={styles.errorEmailContainer}>
+            {state?.errors?.email.map((error, index) => (
+              <p className={styles.errorEmail} key={`error_email_${index}`}>
+                {error}
+              </p>
+            ))}
+          </div>
         )}
         <label className={styles.labelForm} htmlFor="password">
           <input
@@ -38,16 +45,24 @@ export default function Page() {
             type="password"
             name="password"
             id="password"
-            placeholder="Enter your password.."
+            placeholder="Enter your password"
             required
           />
         </label>
-        {state?.errors?.password && <p style={{ color: "red" }}>{state.errors.password}</p>}
+        {state?.errors?.password && (
+          <div className={styles.errorPasswordContainer}>
+            {state.errors.password.map((error, index) => (
+              <p className={styles.errorPassword} key={`error_password_${index}`}>
+                {error}
+              </p>
+            ))}
+          </div>
+        )}
         <button className={styles.submitForm} type="submit" aria-disabled={pending}>
           Register User
         </button>
         {state?.message && (
-          <p style={{ paddingTop: "0.5rem", color: "red" }} aria-live="polite" role="status">
+          <p className={styles.errorState} aria-live="polite" role="status">
             {state?.message}
           </p>
         )}
