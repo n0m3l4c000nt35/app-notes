@@ -1,0 +1,18 @@
+.footer {
+  grid-area: "footer";
+  padding: 1rem;
+}
+
+.author {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.copy {
+  color: var(--accentColor);
+}
+
+.authorGithub {
+  color: var(--accentColor);
+  text-decoration: none;
+}
