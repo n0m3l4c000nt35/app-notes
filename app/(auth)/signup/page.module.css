@@ -23,11 +23,6 @@
   margin-bottom: 1rem;
 }
 
-.labelForm:last-of-type {
-  display: block;
-  margin-bottom: 0.5rem;
-}
-
 .inputForm {
   display: block;
   width: 100%;
@@ -48,9 +43,16 @@
   border: 1px solid var(--darkColor);
 }
 
+.inputForm:valid {
+  color: green;
+}
+
+.inputForm:invalid {
+  color: var(--accentColor);
+}
+
 .submitForm {
   display: inline-block;
-  margin-top: 0.5rem;
   border: 1px solid var(--darkColor);
   border-radius: 8px;
   padding: 0.5rem 0.8rem;
@@ -67,5 +69,26 @@
 
 .submitForm:focus {
   outline: none;
+  color: var(--accentColor);
+}
+
+.errorEmail {
+  margin-top: -0.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--accentColor);
+}
+
+.errorEmailContainer,
+.errorPasswordContainer {
+  margin-top: -0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.errorPassword {
+  color: var(--accentColor);
+}
+
+.errorState {
+  padding-top: 0.5rem;
   color: var(--accentColor);
 }
